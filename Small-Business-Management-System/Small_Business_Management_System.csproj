@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78499A1E-1C57-4F77-A8CF-FBB5D699D638}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Small_Business_Management_System</RootNamespace>
+    <AssemblyName>Small-Business-Management-System</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MANAGER\PurchaseManager.cs" />
+    <Compile Include="MANAGER\SalesManager.cs" />
+    <Compile Include="MODEL\Purchase.cs" />
+    <Compile Include="MODEL\Sales.cs" />
+    <Compile Include="REPOSITORY\PurchaseRepository.cs" />
+    <Compile Include="REPOSITORY\SalesRepository.cs" />
+    <Compile Include="UI\PurchaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PurchaseForm.designer.cs">
+      <DependentUpon>PurchaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MANAGER\CategoryManager.cs" />
+    <Compile Include="MANAGER\CustomerManager.cs" />
+    <Compile Include="MANAGER\ProductManager.cs" />
+    <Compile Include="MANAGER\SupplierManager.cs" />
+    <Compile Include="MODEL\Category.cs" />
+    <Compile Include="MODEL\Customer.cs" />
+    <Compile Include="MODEL\Helper.cs" />
+    <Compile Include="MODEL\Product.cs" />
+    <Compile Include="MODEL\Supplier.cs" />
+    <Compile Include="REPOSITORY\CategoryRepository.cs" />
+    <Compile Include="REPOSITORY\CustomerRepository.cs" />
+    <Compile Include="REPOSITORY\ProductRepository.cs" />
+    <Compile Include="REPOSITORY\SupplierRepository.cs" />
+    <Compile Include="UI\CategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CategoryForm.Designer.cs">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SalesForm.Designer.cs">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ReportingPurchaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ReportingPurchaseForm.Designer.cs">
+      <DependentUpon>ReportingPurchaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ReportingSalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ReportingSalesForm.Designer.cs">
+      <DependentUpon>ReportingSalesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SupplierForm.Designer.cs">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\CategoryForm.resx">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PurchaseForm.resx">
+      <DependentUpon>PurchaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SalesForm.resx">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ReportingPurchaseForm.resx">
+      <DependentUpon>ReportingPurchaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ReportingSalesForm.resx">
+      <DependentUpon>ReportingSalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SupplierForm.resx">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Small_Business_Management_System.MODEL.Category.datasource" />
+    <None Include="Properties\DataSources\Small_Business_Management_System.MODEL.Category1.datasource" />
+    <None Include="Properties\DataSources\Small_Business_Management_System.MODEL.Customer.datasource" />
+    <None Include="Properties\DataSources\Small_Business_Management_System.MODEL.Product.datasource" />
+    <None Include="Properties\DataSources\Small_Business_Management_System.MODEL.Product1.datasource" />
+    <None Include="Properties\DataSources\Small_Business_Management_System.MODEL.Purchase.datasource" />
+    <None Include="Properties\DataSources\Small_Business_Management_System.MODEL.Sales.datasource" />
+    <None Include="Properties\DataSources\Small_Business_Management_System.MODEL.Supplier.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SqlQuery\Category.sql" />
+    <Content Include="SqlQuery\Customer.sql" />
+    <Content Include="SqlQuery\Product.sql" />
+    <Content Include="SqlQuery\Pruchase.sql" />
+    <Content Include="SqlQuery\Sales.sql" />
+    <Content Include="SqlQuery\Supplier.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
